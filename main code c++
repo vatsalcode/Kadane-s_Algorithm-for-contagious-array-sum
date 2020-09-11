@@ -1,0 +1,43 @@
+//author-vatsal verma
+
+
+#include <iostream>
+using namespace std;
+#define ll long long
+
+
+int main() {
+    int test;
+    cin>>test;
+    while(test--){
+        
+        int n;
+        cin>>n;
+        int a[n];
+        for(int i=0;i<n;i++){
+            cin>>a[i];
+        }
+        int max1=0,max2=0;
+        for(int i=0;i<n;i++){
+            max2+=a[i];
+            
+            if(max2<0){
+                max2=0;
+            }
+            if(max1<max2){
+                max1=max2;
+            }
+            
+        }
+        if(max1!=0){
+            cout<<max1<<endl;}
+        else
+            cout<<-1;
+                
+        
+    }
+    
+    
+    
+    return 0;
+}
